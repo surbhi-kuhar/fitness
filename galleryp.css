@@ -1,0 +1,13 @@
+.image:hover{
+    animation:move 1s 1 alternate;
+}
+
+@keyframes move{
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform:scale(1.05); 
+    }
+}
+

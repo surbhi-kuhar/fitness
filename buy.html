@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Payment</title>
+
+    <style>
+        .background {
+            width: 100%;
+            height: 130vh;
+            background-color:darkseagreen;
+
+            
+        }
+
+        .container {
+            position: absolute;
+            top: 20%;
+            left:13%;
+            border:3px solid green;
+            padding:10px;
+            background-color:white
+            
+        }
+
+        .background{
+            display:flex;
+            flex-wrap:wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width:100%;height:auto;background-color:green;"><a href="main.html"><button style="background-color:green;border:0px;font-size:20px;">Back</button></a></div>
+    <div class="background">
+        <div class="container text-dark">
+            <h1>PAYMENT</h1>
+            <form onSubmit="return validate()" name="form1">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">NAME</label>
+                        <input type="text" class="form-control" id="inputEmail4" placeholder="name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputNumber">CONTACT NO.</label>
+                        <input type="number" class="form-control" id="inputEmail4" placeholder="+91 XXXXXXXXXX"
+                            name="phone">
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div>
+                    <label for="inputcardtype">Card type</label><br>
+                    <select class="form-select form-control">
+                        <option value="1">Debit Card </option>
+                        <option value="2">Credit Card</option>
+
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">CARD NUMBER</label>
+                        <input type="number" class="form-control" id="inputCARDNUMBER" name="card">
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        <label for="inputCVV">CVV</label>
+                        <input type="password" class="form-control" id="inputCVV" name="cvv">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputExpirationDate">Expiration Date</label><br>
+                        <select class="form-select ">
+            
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                            <option value="6">06</option>
+                            <option value="7">07</option>
+                            <option value="8">08</option>
+                            <option value="9">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    
+                        <select class="form-select" >
+                        
+                            <option value="1">2022</option>
+                            <option value="2">2023</option>
+                            <option value="3">2024</option>
+                            <option value="4">2025</option>
+                            <option value="5">2026</option>
+                            <option value="6">2027</option>
+                            <option value="7">2028</option>
+                            <option value="8">2029</option>
+                            <option value="9">2030</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <input type="Submit" class="btn btn-success" value="Pay">
+
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+
+
+
+    <script>
+
+
+        function validate() {
+            if (document.form1.phone.value.length < 10) {
+                alert("Enter Atleast ten digit number");
+                return false;
+                
+            }
+            if (document.form1.card.value.length < 12) {
+                alert("Invalid Card Number.");
+                return false;
+              
+            }
+            if (document.form1.cvv.value.length < 3) {
+                alert("Enter Atleast three digit CVV.");
+                return false;
+             
+            }
+            return true;
+        
+
+
+        }
+        
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+.navbar-brand{
+    font-family:"Segoe Script";
+}
+
+
+.image img{
+    opacity:0.7;
+
+}
+
+.centered{
+    position:absolute;
+    left:30%;
+    top:40%;
+    font-size:30px;
+    color:white;
+
+}
+
+.container-fluid{
+    background-color:black;
+    text-align:center;
+}
